@@ -44,6 +44,7 @@ else
 end
 
 gem_package "passenger" do
+  gem_binary node['passenger']['gem_binary'] unless node['passenger']['gem_binary'].nil?
   version node['passenger']['version']
 end
 
